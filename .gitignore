@@ -1,4 +1,4 @@
-# Environment variables (NEVER commit API keys!)
+# Environment variables 
 .env
 
 # Python cache
