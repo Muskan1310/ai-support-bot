@@ -1,48 +1,82 @@
 AI Customer Support Bot
+
 An intelligent customer support chatbot powered by Google Gemini AI that handles FAQs, remembers conversation context, and escalates complex queries to human agents.
 
 Features
 
-💬Natural Language Processing - Understands customer queries in natural language
-🧠 Contextual Memory - Remembers previous messages in the conversation
-🚨 Smart Escalation - Automatically detects when to transfer to human support
-⚡ Fast Responses - Powered by Google Gemini 2.0 Flash (FREE)
-🎨 Modern UI - Beautiful, responsive chat interface
-🔄 Session Management - Tracks multiple user conversations simultaneously
+Natural Language Processing - Understands customer queries in natural language
+
+Contextual Memory - Remembers previous messages in the conversation
+
+Smart Escalation - Automatically detects when to transfer to human support
+
+Fast Responses - Powered by Google Gemini 2.0 Flash (FREE)
+
+Modern UI - Beautiful, responsive chat interface
+
+Session Management - Tracks multiple user conversations simultaneously
+
 
 Tech Stack
+
 Backend: Flask (Python)
+
 AI Model: Google Gemini 2.0 Flash
+
 Frontend: HTML5, CSS3, JavaScript
+
 API Architecture: RESTful endpoints
+
 Storage: In-memory session storage
+
 
 Prerequisites
 
 Python 3.8 or higher
+
 Google Gemini API key (FREE)
 
+
 Installation & Setup
+
 1. Clone the repository
+   
 bashgit clone https://github.com/Muskan1310/ai-support-bot.git
+
 cd ai-support-bot
+
 2. Install dependencies
+   
 bashpip3 install -r requirements.txt
+
 3. Get Google Gemini API Key
 
+
 Go to Google AI Studio
+
 Click "Create API Key"
+
 Copy your API key
 
+
 4. Create .env file
+
 Create a .env file in the project root:
+
 bashGOOGLE_API_KEY=your-api-key-here
+
 5. Run the application
+   
 bashpython3 app.py
+
 The backend will start on http://127.0.0.1:5000
-6. Open the chat interface
+
+8. Open the chat interface
+   
 Open index.html in your web browser.
+
 📡 API Endpoints
+
 POST /chat
 Send a message to the chatbot
 Request:
@@ -153,9 +187,13 @@ Deploy!
      Security Notes
 
 ✅ API keys stored in .env (not committed to Git)
+
 ✅ .gitignore prevents secret leakage
+
 ✅ Input validation on all endpoints
+
 ✅ Error handling prevents information disclosure
+
 
     Performance
 
