@@ -212,7 +212,6 @@
     </div>
 
     <script>
-        // Generate a unique session ID for this user
         const sessionId = 'user_' + Math.random().toString(36).substr(2, 9);
         const API_URL = 'http://localhost:5000';
 
@@ -228,7 +227,7 @@
             messageDiv.appendChild(contentDiv);
             messagesDiv.appendChild(messageDiv);
             
-            // Scroll to bottom
+            
             messagesDiv.scrollTop = messagesDiv.scrollHeight;
         }
 
@@ -261,19 +260,17 @@
             
             if (!message) return;
             
-            // Disable input while processing
+        
             input.disabled = true;
             sendBtn.disabled = true;
             
-            // Add user message to chat
             addMessage(message, true);
             input.value = '';
             
-            // Show typing indicator
             showTypingIndicator();
             
             try {
-                // Send request to backend
+                //Send request to backend
                 const response = await fetch(`${API_URL}/chat`, {
                     method: 'POST',
                     headers: {
@@ -287,11 +284,9 @@
                 
                 const data = await response.json();
                 
-                // Hide typing indicator
                 hideTypingIndicator();
                 
                 if (response.ok) {
-                    // Add bot response
                     addMessage(data.response, false, data.escalate);
                     
                     if (data.escalate) {
@@ -307,7 +302,6 @@
                 addMessage('Unable to connect to server. Make sure the backend is running!', false);
                 console.error('Error:', error);
             } finally {
-                // Re-enable input
                 input.disabled = false;
                 sendBtn.disabled = false;
                 input.focus();
