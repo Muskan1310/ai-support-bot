@@ -5,21 +5,21 @@ from dotenv import load_dotenv
 from datetime import datetime
 import google.generativeai as genai
 
-# Load environment variables
+#environment variables
 load_dotenv()
 
-# Initialize Flask app
+#Flask app
 app = Flask(__name__)
 CORS(app)
 
-# Configure Gemini (FREE!)
+# Configuring Gemini
 genai.configure(api_key=os.getenv('GOOGLE_API_KEY'))
 model = genai.GenerativeModel('gemini-2.0-flash')
 
-# Store conversations in memory
+# Storing conversations in memory
 conversations = {}
 
-# Your FAQ knowledge base
+#FAQ knowledge base
 FAQ_KNOWLEDGE = """
 You are a customer support assistant for TechShop, an electronics store.
 
@@ -53,7 +53,7 @@ def chat():
     Expects JSON: {"session_id": "user123", "message": "What are your store hours?"}
     """
     try:
-        # Get data from the request
+       
         data = request.json
         session_id = data.get('session_id', 'default')
         user_message = data.get('message', '')
@@ -61,11 +61,11 @@ def chat():
         if not user_message:
             return jsonify({"error": "Message is required"}), 400
         
-        # Initialize conversation history if new session
+        #Initializing conversation history for new session
         if session_id not in conversations:
             conversations[session_id] = []
         
-        # Add user message to history
+        # Adding user message to history
         conversations[session_id].append({
             "role": "user",
             "content": user_message,
@@ -75,30 +75,28 @@ def chat():
         # Build prompt with context
         prompt = FAQ_KNOWLEDGE + "\n\nConversation history:\n"
         
-        # Add last 5 messages for context
+    
         for msg in conversations[session_id][-5:]:
             role = "Customer" if msg['role'] == 'user' else "Assistant"
             prompt += f"{role}: {msg['content']}\n"
         
         prompt += f"\nCustomer: {user_message}\nAssistant:"
         
-        # Call Gemini API (FREE!)
         response = model.generate_content(prompt)
         ai_message = response.text
         
-        # Check if escalation is needed
+        # Checking for escalation
         needs_escalation = "ESCALATE:" in ai_message
         if needs_escalation:
             ai_message = ai_message.replace("ESCALATE:", "").strip()
         
-        # Add AI response to history
         conversations[session_id].append({
             "role": "assistant",
             "content": ai_message,
             "timestamp": datetime.now().isoformat()
         })
         
-        # Return response
+        
         return jsonify({
             "response": ai_message,
             "escalate": needs_escalation,
