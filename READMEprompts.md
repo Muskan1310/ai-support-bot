@@ -18,9 +18,9 @@ respond with: "ESCALATE: I'll connect you with a human agent who can better assi
 ```
 
 
-##Example Conversations
+Example Conversations
 
-### Example 1: Simple FAQ Query
+Example 1: Simple FAQ Query
 
 **User Input:**
 ```
@@ -34,15 +34,15 @@ respond with: "ESCALATE: I'll connect you with a human agent who can better assi
 Conversation history:
 
 Customer: What are your store hours?
-Assistant:
-```
 
+```
 **AI Response:**
 ```
 "Our store hours are Monday-Saturday 9AM-8PM, and Sunday 10AM-6PM. 
 Is there anything else I can help you with?"
+```
 
-### Example 2: Multi-Turn with Context
+Example 2: Multi-Turn with Context
 
 **Turn 1:**
 ```
@@ -63,14 +63,16 @@ Conversation history:
 Customer: What's your return policy?
 Assistant: We have a 30-day return policy. Items must be unopened and in original packaging.
 Customer: How many days did you say that was?
-Assistant:
+
 ```
 
 **AI Response:**
 ```
 "Our return policy is 30 days."
+```
 
-### Example 3: Escalation Scenario
+ Example 3: Escalation Scenario
+
 
 **User Input:**
 ```
@@ -82,7 +84,7 @@ Assistant:
 [System Prompt with escalation instruction]
 
 Customer: I want to cancel my custom order immediately!
-Assistant:
+
 ```
 
 **AI Response:**
