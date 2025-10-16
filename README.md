@@ -1,27 +1,24 @@
-# 🤖 AI Customer Support Bot
+# AI Customer Support Bot
 
 An intelligent customer support chatbot powered by Google Gemini AI that handles FAQs, remembers conversation context, and escalates complex queries to human agents.
 
-![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)
-![Flask](https://img.shields.io/badge/Flask-3.0.0-green.svg)
-![Gemini](https://img.shields.io/badge/Google-Gemini_AI-orange.svg)
-![License](https://img.shields.io/badge/License-MIT-yellow.svg)
+
 
 ---
 
-## ✨ Features
+##  Features
 
-- 💬 **Natural Language Processing** - Understands customer queries in natural language
-- 🧠 **Contextual Memory** - Remembers previous messages in the conversation
-- 🚨 **Smart Escalation** - Automatically detects when to transfer to human support
-- ⚡ **Fast Responses** - Powered by Google Gemini 2.0 Flash (FREE)
-- 🎨 **Modern UI** - Beautiful, responsive chat interface
-- 🔄 **Session Management** - Tracks multiple user conversations simultaneously
-- 🔒 **Secure** - API keys protected with environment variables
+-  **Natural Language Processing** - Understands customer queries in natural language
+-  **Contextual Memory** - Remembers previous messages in the conversation
+-  **Smart Escalation** - Automatically detects when to transfer to human support
+-  **Fast Responses** - Powered by Google Gemini 2.0 Flash (FREE)
+-  **Modern UI** - Beautiful, responsive chat interface
+-  **Session Management** - Tracks multiple user conversations simultaneously
+-  **Secure** - API keys protected with environment variables
 
 ---
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 **Backend:**
 - Python 3.8+
@@ -38,7 +35,7 @@ An intelligent customer support chatbot powered by Google Gemini AI that handles
 
 ---
 
-## 📋 Prerequisites
+##  Prerequisites
 
 Before running this project, make sure you have:
 
@@ -48,7 +45,7 @@ Before running this project, make sure you have:
 
 ---
 
-## 🚀 Installation & Setup
+##  Installation & Setup
 
 ### 1. Clone the repository
 ```bash
@@ -89,7 +86,7 @@ Simply open `index.html` in your web browser.
 
 ---
 
-## 💬 Usage
+##  Usage
 
 ### Chat Interface
 
@@ -108,7 +105,7 @@ Try asking:
 
 ---
 
-## 📡 API Endpoints
+## API Endpoints
 
 ### POST `/chat`
 Send a message to the chatbot
@@ -164,7 +161,7 @@ Clear a conversation session
 
 ---
 
-## 🧠 How It Works
+##  How It Works
 
 ### Architecture
 ```
@@ -206,7 +203,7 @@ The bot automatically escalates to human support when:
 
 ---
 
-## 🎨 Customization
+##  Customization
 
 ### Modify FAQs
 
@@ -264,7 +261,7 @@ ai-support-bot/
 
 ---
 
-## 🧪 Testing
+##  Testing
 
 ### Manual Testing
 
@@ -294,7 +291,7 @@ curl http://localhost:5000/history/test123
 
 ---
 
-## 🚀 Deployment
+##  Deployment
 
 ### Deploy to Render (Free)
 
@@ -312,7 +309,7 @@ curl http://localhost:5000/history/test123
 
 ---
 
-## 🔒 Security
+##  Security
 
 - ✅ API keys stored in `.env` file (not committed to Git)
 - ✅ `.gitignore` prevents accidental secret exposure
@@ -322,7 +319,7 @@ curl http://localhost:5000/history/test123
 
 ---
 
-## 📊 Performance
+##  Performance
 
 - **Response Time:** < 2 seconds average
 - **Rate Limit:** 60 requests/minute (Gemini free tier)
@@ -331,7 +328,7 @@ curl http://localhost:5000/history/test123
 
 ---
 
-## 🐛 Troubleshooting
+##  Troubleshooting
 
 ### "Module not found" errors
 ```bash
@@ -354,7 +351,7 @@ pip3 install -r requirements.txt
 
 ---
 
-## 🎓 What I Learned
+##  What I Learned
 
 Building this project taught me:
 - ✅ REST API development with Flask
@@ -368,7 +365,7 @@ Building this project taught me:
 
 ---
 
-## 🔮 Future Enhancements
+##  Future Enhancements
 
 Potential improvements for v2.0:
 - [ ] Database integration (PostgreSQL/MongoDB) for persistent storage
@@ -382,15 +379,10 @@ Potential improvements for v2.0:
 - [ ] Live chat handoff to human agents
 - [ ] Mobile app version (React Native)
 
----
-
-## 📝 License
-
-This project is open source and available under the [MIT License](LICENSE).
 
 ---
 
-## 👨‍💻 Author
+##  Author
 
 **Muskan**
 - GitHub: [@Muskan1310](https://github.com/Muskan1310)
@@ -398,7 +390,7 @@ This project is open source and available under the [MIT License](LICENSE).
 
 ---
 
-## 🙏 Acknowledgments
+##  Acknowledgments
 
 - [Google Gemini](https://ai.google.dev/) for providing free AI API
 - [Flask](https://flask.palletsprojects.com/) for the excellent web framework
@@ -406,7 +398,7 @@ This project is open source and available under the [MIT License](LICENSE).
 
 ---
 
-## 📞 Support
+##  Support
 
 If you have any questions or run into issues:
 1. Check the [Troubleshooting](#-troubleshooting) section
